@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import { SITE, I18N } from 'astrowind:config';
 import StructuredData from '~/components/common/StructuredData.astro';
+import { getAsset } from '~/utils/permalinks';
 const metadata = {
   title: 'FIMI-RESIST — Building European resilience against information manipulation',
   description:
@@ -68,6 +69,7 @@ const schema = [
 
 <Layout metadata={metadata}>
   <StructuredData slot="head" schema={schema} />
+  <Fragment slot="announcement"></Fragment>
   <section class="hero relative overflow-hidden pt-20 pb-16 lg:pt-32 lg:pb-24">
     <div class="signal signal-a"></div><div class="signal signal-b"></div><div
       class="mx-auto max-w-7xl px-5 sm:px-8 relative"
@@ -89,7 +91,7 @@ const schema = [
           </div>
         </div>
         <div class="hero-card" aria-label="Project at a glance">
-          <img src="/fimi-resist-logo.png" alt="FIMI-RESIST" class="w-full h-auto" /><dl
+          <img src={getAsset('/fimi-resist-logo.png')} alt="FIMI-RESIST" class="w-full h-auto" /><dl
             class="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-slate-200"
           >
             <div><dt>Duration</dt><dd>30 months</dd></div><div><dt>Starts</dt><dd>Sep 2026</dd></div><div>

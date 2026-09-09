@@ -1,4 +1,4 @@
-import { getPermalink } from './utils/permalinks';
+import { getAsset, getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     { text: 'Mission', href: getPermalink('/#mission') },
@@ -33,5 +33,5 @@ export const footerData = {
   ],
   secondaryLinks: [{ text: 'Privacy', href: getPermalink('/privacy') }],
   socialLinks: [],
-  footNote: `<span style="display:block;width:305px;max-width:100%;overflow:hidden;margin:0 auto 1.25rem"><img src="/eu-funding.png" alt="Funded by the European Union" style="width:774px;max-width:none;height:66px"></span>Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.<br><br>FIMI-RESIST · Grant Agreement No. 101285890 · 2026–2029`,
+  footNote: `<span style="display:block;width:305px;max-width:100%;overflow:hidden;margin:0 auto 1.25rem"><img src="${getAsset('/eu-funding.png')}" alt="Funded by the European Union" style="width:774px;max-width:none;height:66px"></span>Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.<br><br>FIMI-RESIST · Grant Agreement No. 101285890 · 2026–2029`,
 };
