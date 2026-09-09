@@ -32,7 +32,10 @@ export const footerData = {
       ],
     },
   ],
-  secondaryLinks: [{ text: 'Privacy', href: getPermalink('/privacy') }],
+  secondaryLinks: [
+    { text: 'Impressum', href: getPermalink('/impressum') },
+    { text: 'Privacy', href: getPermalink('/privacy') },
+  ],
   socialLinks: [],
   footNote: `<span style="display:block;width:356px;max-width:100%;margin:0 auto 1.25rem"><img src="${getAsset('/eu-funding-funded.png')}" alt="Funded by the European Union" style="display:block;width:100%;height:auto"></span>Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.<br><br>FIMI-RESIST · Grant Agreement No. 101285890 · 2026–2029`,
 };
