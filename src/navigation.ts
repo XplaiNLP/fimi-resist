@@ -28,6 +28,7 @@ export const footerData = {
           href: 'https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en',
         },
         { text: 'Coordinator: JGU Mainz', href: 'https://www.uni-mainz.de/' },
+        { text: 'info-fimi-resist@uni-mainz.de', href: 'mailto:info-fimi-resist@uni-mainz.de' },
       ],
     },
   ],
