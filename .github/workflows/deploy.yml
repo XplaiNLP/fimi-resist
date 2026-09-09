@@ -24,9 +24,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Astro
         env:
-          # Serve correctly from the repository URL while the custom-domain DNS
-          # is not active yet: https://xplainlp.github.io/fimi-resist/
-          PUBLIC_BASE_PATH: /fimi-resist
+          # The site is served from the root of the custom domain.
+          PUBLIC_BASE_PATH: /
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
