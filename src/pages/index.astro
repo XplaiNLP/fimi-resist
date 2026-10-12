@@ -47,7 +47,14 @@ const partners = [
   { name: 'CERTH', location: 'Greece', href: '/partners/certh', logo: '/certh-logo.webp' },
   { name: 'University of Amsterdam', location: 'Netherlands', href: '/partners/uva', logo: '/uva-logo.webp' },
   { name: 'Logically / INSIKT', location: 'United Kingdom / Spain' },
-  { name: 'Exorde Labs', location: 'France', href: '/partners/exorde', logo: '/exorde-logo.webp' },
+  {
+    name: 'Exorde Labs',
+    location: 'France',
+    href: '/partners/exorde',
+    logo: '/exorde-logo-wide.webp',
+    logoBackdrop: 'dark',
+    logoWide: true,
+  },
   { name: 'Cyfluence Research Center', location: 'Germany' },
   { name: 'Deutsche Welle', location: 'Germany' },
   { name: 'VoxUkraine', location: 'Ukraine' },
@@ -164,10 +171,15 @@ const schema = [
           </p>
         </div><div class="partner-grid">
           {
-            partners.map(({ name, location, href, logo, logoBackdrop }) => (
+            partners.map(({ name, location, href, logo, logoBackdrop, logoWide }) => (
               <a class:list={['partner-card', { 'partner-card-link': href }]} href={href || undefined}>
                 {logo ? (
-                  <span class:list={['partner-logo-wrap', { 'partner-logo-dark': logoBackdrop === 'dark' }]}>
+                  <span
+                    class:list={[
+                      'partner-logo-wrap',
+                      { 'partner-logo-dark': logoBackdrop === 'dark', 'partner-logo-wide': logoWide },
+                    ]}
+                  >
                     <img class="partner-logo" src={getAsset(logo)} alt={`${name} logo`} />
                   </span>
                 ) : (
@@ -431,8 +443,10 @@ const schema = [
     border-radius: 0.6rem;
     background: white;
     flex: none;
+    overflow: hidden;
   }
   .partner-logo-dark { background: #080b13; }
+  .partner-logo-wide { width: 6.5rem; }
   .partner-arrow {
     margin-left: auto;
     color: #2634ff;
