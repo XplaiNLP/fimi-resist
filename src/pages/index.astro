@@ -44,14 +44,14 @@ const objectives = [
 const partners = [
   { name: 'JGU Mainz', location: 'Germany · Coordinator', href: '/partners/jgu-mainz', logo: '/jgu-mainz-logo.png' },
   { name: 'KInIT', location: 'Slovakia' },
-  { name: 'CERTH', location: 'Greece' },
-  { name: 'University of Amsterdam', location: 'Netherlands' },
+  { name: 'CERTH', location: 'Greece', href: '/partners/certh', logo: '/certh-logo.webp' },
+  { name: 'University of Amsterdam', location: 'Netherlands', href: '/partners/uva', logo: '/uva-logo.webp' },
   { name: 'Logically / INSIKT', location: 'United Kingdom / Spain' },
-  { name: 'Exorde Labs', location: 'France' },
+  { name: 'Exorde Labs', location: 'France', href: '/partners/exorde', logo: '/exorde-logo.webp' },
   { name: 'Cyfluence Research Center', location: 'Germany' },
   { name: 'Deutsche Welle', location: 'Germany' },
   { name: 'VoxUkraine', location: 'Ukraine' },
-  { name: 'Factiverse', location: 'Norway' },
+  { name: 'Factiverse', location: 'Norway', href: '/partners/factiverse', logo: '/factiverse-logo.webp' },
   { name: 'Gretchen AI', location: 'Germany · Associated partner' },
 ];
 const schema = [
@@ -164,10 +164,12 @@ const schema = [
           </p>
         </div><div class="partner-grid">
           {
-            partners.map(({ name, location, href, logo }) => (
+            partners.map(({ name, location, href, logo, logoBackdrop }) => (
               <a class:list={['partner-card', { 'partner-card-link': href }]} href={href || undefined}>
                 {logo ? (
-                  <img class="partner-logo" src={getAsset(logo)} alt="Johannes Gutenberg University Mainz" />
+                  <span class:list={['partner-logo-wrap', { 'partner-logo-dark': logoBackdrop === 'dark' }]}>
+                    <img class="partner-logo" src={getAsset(logo)} alt={`${name} logo`} />
+                  </span>
                 ) : (
                   <div class="logo-placeholder" aria-hidden="true">Logo</div>
                 )}
@@ -416,12 +418,21 @@ const schema = [
     box-shadow: 0 14px 35px rgba(38, 52, 255, 0.12);
   }
   .partner-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .partner-logo-wrap {
     width: 4.5rem;
     height: 3.25rem;
-    object-fit: contain;
+    padding: 0.35rem;
+    display: grid;
+    place-items: center;
     border-radius: 0.6rem;
+    background: white;
     flex: none;
   }
+  .partner-logo-dark { background: #080b13; }
   .partner-arrow {
     margin-left: auto;
     color: #2634ff;

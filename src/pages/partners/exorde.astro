@@ -1,0 +1,19 @@
+---
+import PartnerProfile from '~/components/PartnerProfile.astro';
+const people = [
+  { name: 'Tristan Palmer', image: '/exorde-tristan-palmer.webp' },
+  { name: 'Rebecca Hough', image: '/exorde-rebecca-hough.webp' },
+  { name: 'Matthew Alario', image: '/exorde-matthew-alario.webp' },
+  { name: 'Mathias Dail', image: '/exorde-mathias-dail.webp' },
+  { name: 'Dominik Presl', image: '/exorde-dominik-presl.webp' },
+];
+---
+
+<PartnerProfile
+  name="Exorde Labs"
+  shortName="Exorde"
+  country="France"
+  logo="/exorde-logo.webp"
+  intro="Exorde Labs contributes its team and technology expertise to the FIMI-RESIST consortium."
+  {people}
+/>

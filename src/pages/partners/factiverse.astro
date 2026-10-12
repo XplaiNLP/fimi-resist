@@ -1,0 +1,17 @@
+---
+import PartnerProfile from '~/components/PartnerProfile.astro';
+const people = [
+  { name: 'Maria Amelie', image: '/factiverse-maria-amelie.webp' },
+  { name: 'Sean Jacob', image: '/factiverse-sean-jacob.webp' },
+  { name: 'Lasha Kavtaradze', image: '/factiverse-lasha-kavtaradze.webp' },
+];
+---
+
+<PartnerProfile
+  name="Factiverse"
+  shortName="Factiverse"
+  country="Norway"
+  logo="/factiverse-logo.webp"
+  intro="Factiverse contributes its team and technology expertise to the FIMI-RESIST consortium."
+  {people}
+/>

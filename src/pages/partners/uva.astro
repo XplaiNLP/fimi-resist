@@ -1,0 +1,40 @@
+---
+import PartnerProfile from '~/components/PartnerProfile.astro';
+
+const people = [
+  {
+    name: 'Richard Rogers',
+    image: '/uva-richard-rogers.webp',
+    bio: [
+      'Richard Rogers is University Professor and holds the Chair in New Media & Digital Culture at the University of Amsterdam. He is also Director of the Govcom.org Foundation and the Digital Methods Initiative.',
+      'His research and publications have shaped the field of digital methods. His books include Information Politics on the Web, The End of the Virtual, Digital Methods, Doing Digital Methods, and Critical Analytics for Social Media.',
+    ],
+  },
+  {
+    name: 'Emillie de Keulenaar',
+    image: '/uva-emillie-de-keulenaar.webp',
+    bio: [
+      'Emillie de Keulenaar is a postdoctoral researcher at the University of Amsterdam’s Digital Methods Initiative and Open Intelligence Lab, and a researcher for the United Nations Department of Political and Peacebuilding Affairs’ Innovation Cell.',
+      'Her research examines how conflicts are transformed in information spaces and how approaches from peace studies, the philosophy of dialogue and democratic theory can be operationalised through social media and AI affordances.',
+    ],
+  },
+  { name: 'Varvara Boboc', image: '/uva-varvara-boboc.webp' },
+  {
+    name: 'Guillén Torres',
+    image: '/uva-guillen-torres.webp',
+    bio: [
+      'Guillén Torres is an Open Source Investigations Specialist with more than 15 years of experience in action research and methodological experimentation using data-based technologies to support communities seeking justice and accountability.',
+      'He previously lectured and conducted doctoral research at the University of Amsterdam’s Media Studies department and has organised numerous intensive investigative research sprints through the Digital Methods Initiative.',
+    ],
+  },
+];
+---
+
+<PartnerProfile
+  name="University of Amsterdam"
+  shortName="UvA"
+  country="Netherlands"
+  logo="/uva-logo.webp"
+  intro="The University of Amsterdam contributes expertise in digital methods, information spaces and open-source investigations to FIMI-RESIST."
+  {people}
+/>
