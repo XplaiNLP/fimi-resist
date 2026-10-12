@@ -42,7 +42,13 @@ const objectives = [
   ],
 ];
 const partners = [
-  { name: 'JGU Mainz', location: 'Germany · Coordinator', href: '/partners/jgu-mainz', logo: '/jgu-mainz-logo.png' },
+  {
+    name: 'JGU Mainz',
+    location: 'Germany · Coordinator',
+    href: '/partners/jgu-mainz',
+    logo: '/jgu-mainz-logo.png',
+    logoCompact: true,
+  },
   { name: 'KInIT', location: 'Slovakia' },
   { name: 'CERTH', location: 'Greece', href: '/partners/certh', logo: '/certh-logo.webp' },
   { name: 'University of Amsterdam', location: 'Netherlands', href: '/partners/uva', logo: '/uva-logo.webp' },
@@ -171,13 +177,17 @@ const schema = [
           </p>
         </div><div class="partner-grid">
           {
-            partners.map(({ name, location, href, logo, logoBackdrop, logoWide }) => (
+            partners.map(({ name, location, href, logo, logoBackdrop, logoWide, logoCompact }) => (
               <a class:list={['partner-card', { 'partner-card-link': href }]} href={href || undefined}>
                 {logo ? (
                   <span
                     class:list={[
                       'partner-logo-wrap',
-                      { 'partner-logo-dark': logoBackdrop === 'dark', 'partner-logo-wide': logoWide },
+                      {
+                        'partner-logo-dark': logoBackdrop === 'dark',
+                        'partner-logo-wide': logoWide,
+                        'partner-logo-compact': logoCompact,
+                      },
                     ]}
                   >
                     <img class="partner-logo" src={getAsset(logo)} alt={`${name} logo`} />
@@ -447,6 +457,10 @@ const schema = [
   }
   .partner-logo-dark { background: #080b13; }
   .partner-logo-wide { width: 6.5rem; }
+  .partner-logo-compact img {
+    width: 76%;
+    height: 76%;
+  }
   .partner-arrow {
     margin-left: auto;
     color: #2634ff;
