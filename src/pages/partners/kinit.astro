@@ -1,5 +1,43 @@
 ---
 import PartnerProfile from '~/components/PartnerProfile.astro';
+
+const people = [
+  {
+    name: 'Jakub Šimko',
+    image: '/kinit-jakub-simko.webp',
+    bio: [
+      'Jakub is Lead and Researcher at KInIT. Jakub’s research lies at the intersection of human-computer interaction, user modeling and low-resource classification tasks. He has recently been working on algorithmic auditing of social media recommender systems (a.k.a. “social media algorithms”), and research of methods for supporting media professionals in false information countering. In the past, his research was dedicated to human computation scenarios (today relevant in human-in-the-loop setups) and to eye-tracking based user studies.',
+      'Jakub spearheads KInIT’s international and interdisciplinary research project collaborations. Recently, he has been dedicating considerable effort to preparation of Horizon Europe grant projects. He supervised or took part in multiple research projects focused on false information countering (vera-AI, VIGILANT, AI-CODE, CEDMO, CEDMO 2, ExU) and social media auditing (AI-Auditology).',
+      'Jakub leads the Web and User Data Processing (WUDAP) team of KInIT and is a member of KInIT’s executive board and board of trustees. In this capacity, he participates in institutional development of KInIT. Jakub has a strong past record of educational activities and young talent nurturing. He successfully supervised many master and bachelor students and, recently, his first PhD student. He advances KInIT’s internship programme and mentoring activities.',
+    ],
+  },
+  {
+    name: 'Róbert Móro',
+    image: '/kinit-robert-moro.webp',
+    bio: [
+      'Róbert’s research interests have for the past several years revolved mainly around false information countering using AI and NLP approaches as well as synthetic text generation and detection. At the same time, he has also been interested in how people interact with the intelligent systems and how this interaction can be modelled and adapted (personalized).',
+      'He has been involved in several EU-funded projects addressing these problems, most notably HE IA VIGILANT, HE IA AI-CODE, or CEDMO for the false information countering and MSCA Doctoral Network Eyes4ICU for understanding and modeling users’ interaction (by the means of eye tracking). He has co-authored more than 50 papers accepted to journals, including ACM TORS, ACM TIST, or ACM JRC; or conferences, including ACL, EMNLP, ACM RecSys, ACM SIGIR, or ACM UMAP.',
+      'His international research collaborations include Fondazione Bruno Kessler where he carried out a 5-weeks long research stay in 2024; PennState University, University of Calabria, University of Sheffield, ADAPT, University of Lugano, University of British Columbia, and others. Besides national and international research projects, he has been also actively involved in multiple industry research projects.',
+    ],
+  },
+  {
+    name: 'Andrea Hrčková',
+    image: '/kinit-andrea-hrckova.webp',
+    bio: [
+      'Andrea holds a PhD in Library and Information Science from Comenius University in Bratislava. Her interdisciplinary academic background informs both the human-centered and data-centric aspects of artificial intelligence design. During her time at KInIT, Andrea developed a passion for researching user needs and customizing AI tools to meet them. She also gained experience in prompting and prompt-engineering practices, both through hands-on work and by teaching others how to use large language models effectively. She believes that AI can streamline and support time-consuming or repetitive tasks for a wide range of users, from fact-checkers, through administrative personnel to doctoral students in AI.',
+      'Andrea’s research interests also include exploring qualitative aspects of datasets for AI models. She has contributed to expert dataset preparation, including datasets on gender stereotypes and disinformation, and has participated in various experiments leveraging these datasets. Andrea is quite meticulous with terminology, ensuring clarity and fostering the interdisciplinary approach that AI research demands.',
+    ],
+  },
+  {
+    name: 'Martin Hyben',
+    image: '/kinit-martin-hyben.webp',
+    bio: [
+      'Martin is an AI specialist in natural language processing, machine learning and cybernetics. He focuses on early detection of disinformation campaigns, multilingual narrative analysis and AI for languages with little training data. His research centres on robust AI models that support fact-checking and the retrieval of claims and narratives across European languages. He puts emphasis on user-centric evaluation using generative language models.',
+      'He was a main contributor to the project DisTraceAI, which builds on vera.ai by using LLM-based methods to detect manipulative campaigns in real time in the Central European information space. He previously led the ExU project, developing tools to analyse disinformation in more than 20 languages. He also worked on check-worthy claim detection and narrative analysis in vera.ai. He also works on improving meta-research through LLM prompting pipelines and automated data extraction.',
+      'Martin also has a background in applied AI and robotics. He did research on general problem-solving AI agents and integrated NLP and AI modules into the humanoid robot DiBo+. At the University of Žilina, he worked on spatial intelligence for pathfinding. His eHealth work covered diabetes management via telemedicine and speech technologies for low-resource devices, which earned him a Dean’s Award. As WUDAP team coordinator for the HOPERO project within the Slovak AI European Digital Innovation Hub, he helped Slovak companies adopt AI and built links between academia and industry.',
+    ],
+  },
+];
 ---
 
 <PartnerProfile
@@ -8,4 +46,5 @@ import PartnerProfile from '~/components/PartnerProfile.astro';
   country="Slovakia"
   logo="/kinit-logo.webp"
   intro="KInIT is a Slovak research partner in the FIMI-RESIST consortium."
+  {people}
 />
