@@ -68,7 +68,12 @@ const partners = [
     logoWide: true,
   },
   { name: 'Cyfluence Research Center', location: 'Germany' },
-  { name: 'Deutsche Welle', location: 'Germany' },
+  {
+    name: 'Deutsche Welle',
+    location: 'Germany',
+    href: '/partners/deutsche-welle',
+    logo: '/dw-logo.svg',
+  },
   {
     name: 'VoxUkraine',
     location: 'Ukraine',
@@ -210,13 +215,19 @@ const schema = [
                     <img class="partner-logo" src={getAsset(logo)} alt={`${name} logo`} />
                   </span>
                 ) : (
-                  <div class="logo-placeholder" aria-hidden="true">Logo</div>
+                  <div class="logo-placeholder" aria-hidden="true">
+                    Logo
+                  </div>
                 )}
                 <div>
                   <h3>{name}</h3>
                   <p>{location}</p>
                 </div>
-                {href && <span class="partner-arrow" aria-hidden="true">↗</span>}
+                {href && (
+                  <span class="partner-arrow" aria-hidden="true">
+                    ↗
+                  </span>
+                )}
               </a>
             ))
           }
@@ -261,9 +272,8 @@ const schema = [
           FIMI-RESIST began in September 2026. Follow our work, news and opportunities on <a
             class="contact-link"
             href="https://www.linkedin.com/company/fimi-resist">LinkedIn</a
-          >. For enquiries, contact <a
-            class="contact-link"
-            href="mailto:info-fimi-resist@uni-mainz.de">info-fimi-resist@uni-mainz.de</a
+          >. For enquiries, contact <a class="contact-link" href="mailto:info-fimi-resist@uni-mainz.de"
+            >info-fimi-resist@uni-mainz.de</a
           >.
         </p>
       </div>
@@ -450,7 +460,9 @@ const schema = [
   }
   .partner-card-link {
     border-color: #2634ff;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
   .partner-card-link:hover {
     transform: translateY(-2px);
@@ -472,8 +484,12 @@ const schema = [
     flex: none;
     overflow: hidden;
   }
-  .partner-logo-dark { background: #080b13; }
-  .partner-logo-wide { width: 6.5rem; }
+  .partner-logo-dark {
+    background: #080b13;
+  }
+  .partner-logo-wide {
+    width: 6.5rem;
+  }
   .partner-logo-compact img {
     width: 76%;
     height: 76%;

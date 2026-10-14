@@ -1,0 +1,29 @@
+---
+import PartnerProfile from '~/components/PartnerProfile.astro';
+
+const people = [
+  {
+    name: 'Jochen Spangenberg',
+    image: '/jochen-spangenberg.webp',
+    imageCredit: 'Photo: DW / Kornelia Danetzki · CC BY-NC-SA 2.0',
+    bio: [
+      'Jochen Spangenberg is a media and communication expert working at Germany’s international media organisation Deutsche Welle as Deputy Head of Research and Cooperation Projects. The topical focus of Jochen’s work over the past decade has been on research dealing with social newsgathering, disinformation analysis and verification of digital content, and relating all this to the news sector and journalism. Jochen led DW’s work in a variety of projects dealing with countering disinformation such as Reveal, InVID, WeVerify and vera.ai.',
+      'Jochen also lectures at the Free University Berlin in Media & Communication Studies, is an active supporter of Lie Detectors, an NGO that brings media literacy into classrooms, and serves as vice-chair of the Advisory Council of the European Digital Media Observatory (EDMO), Europe’s primary initiative against disinformation. He is furthermore Advisory Board chair of CEDMO (Central European Digital Media Observatory) and Advisory Board member of GADMO (German-Austrian Digital Media Observatory).',
+      'In FIMI-RESIST, Jochen will be involved primarily on the administrative and coordination side, and also be active in dissemination and training.',
+    ],
+    links: [
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jospa/' },
+      { label: 'Bluesky', href: 'https://bsky.app/profile/jospang.bsky.social' },
+    ],
+  },
+];
+---
+
+<PartnerProfile
+  name="Deutsche Welle"
+  shortName="DW"
+  country="Germany"
+  logo="/dw-logo.svg"
+  intro="Deutsche Welle brings media expertise, research experience and strong links to journalism, verification and international cooperation to FIMI-RESIST."
+  {people}
+/>

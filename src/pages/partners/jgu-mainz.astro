@@ -78,7 +78,9 @@ const people = [
               <div class="bio">
                 <p class="role">{person.role}</p>
                 <h2>{person.name}</h2>
-                {person.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+                {person.paragraphs.map((paragraph) => (
+                  <p>{paragraph}</p>
+                ))}
               </div>
             </article>
           ))
@@ -98,7 +100,9 @@ const people = [
     font-weight: 750;
     text-decoration: none;
   }
-  .back-link:hover { color: #2634ff; }
+  .back-link:hover {
+    color: #2634ff;
+  }
   .hero-grid {
     display: grid;
     gap: 3rem;
@@ -144,9 +148,17 @@ const people = [
     text-decoration: none;
     box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
   }
-  .jgu-mark img { width: 9rem; height: 9rem; object-fit: contain; }
-  .team-section { padding: 7rem 0; }
-  .people { margin-top: 3.5rem; }
+  .jgu-mark img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: contain;
+  }
+  .team-section {
+    padding: 7rem 0;
+  }
+  .people {
+    margin-top: 3.5rem;
+  }
   .person {
     display: grid;
     gap: 2.5rem;
@@ -182,13 +194,26 @@ const people = [
     line-height: 1.75;
   }
   @media (min-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr auto; }
-    .person { grid-template-columns: 22rem 1fr; gap: 5rem; }
+    .hero-grid {
+      grid-template-columns: 1fr auto;
+    }
+    .person {
+      grid-template-columns: 22rem 1fr;
+      gap: 5rem;
+    }
   }
   @media (max-width: 640px) {
-    .team-hero { padding: 3.5rem 0 4rem; }
-    .hero-grid { margin-top: 2.5rem; }
-    .team-section { padding: 4.5rem 0; }
-    .person { padding: 2.75rem 0; }
+    .team-hero {
+      padding: 3.5rem 0 4rem;
+    }
+    .hero-grid {
+      margin-top: 2.5rem;
+    }
+    .team-section {
+      padding: 4.5rem 0;
+    }
+    .person {
+      padding: 2.75rem 0;
+    }
   }
 </style>
