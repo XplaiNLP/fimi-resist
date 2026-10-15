@@ -1,0 +1,25 @@
+---
+import PartnerProfile from '~/components/PartnerProfile.astro';
+
+const people = [
+  {
+    name: 'Eilon Bendet',
+    image: '/eilon-bendet.webp',
+    bio: [
+      'Eilon Bendet is a cybersecurity and influence defence expert with more than 15 years of experience in threat intelligence, digital forensics, and incident response. As Research Director at the Cyfluence Research Center, he leads its global research activities, oversees international collaborations, and advises stakeholders on cyber and cognitive security posture management, counter-FIMI solutions, and defensive strategies.',
+      'His work examines how multidimensional threats converge across technological and operational domains, and their societal effects, particularly in the context of managed contested spaces (MCS).',
+      'Eilon also contributes to EU-based forums advancing research on cognitive warfare and hybrid threats. Previously, he led teams of threat researchers and security engineers tracking advanced persistent threats (APTs) and developing detection and remediation capabilities for a broad range of cybersecurity risks.',
+      'In FIMI-RESIST, Eilon contributes to capacity building, training, and knowledge sharing with project stakeholders.',
+    ],
+  },
+];
+---
+
+<PartnerProfile
+  name="Cyfluence Research Center"
+  shortName="CRC"
+  country="Germany"
+  logo="/crc-logo.webp"
+  intro="Cyfluence Research Center contributes expertise in cybersecurity, influence defence, cognitive security and counter-FIMI strategies to the FIMI-RESIST consortium."
+  {people}
+/>
