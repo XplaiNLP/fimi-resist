@@ -1,5 +1,40 @@
 ---
 import PartnerProfile from '~/components/PartnerProfile.astro';
+
+const people = [
+  {
+    name: 'Symeon (Akis) Papadopoulos',
+    image: '/symeon-akis-papadopoulos.webp',
+    bio: [
+      'Symeon (Akis) Papadopoulos is a Principal Researcher at the Information Technologies Institute of the Centre for Research and Technology Hellas (CERTH-ITI) and leads the MeVer group (mever.gr). He oversees a team of researchers and engineers working across artificial intelligence, media analysis, multimedia retrieval and network analytics. His research interests include media verification, deepfake detection, online disinformation and the development of trustworthy and fair AI systems. He also investigates how social media signals can support the detection and forecasting of emerging trends.',
+      'He has coordinated and led numerous collaborative research and innovation projects and co-authored more than 200 scientific publications. He is also a co-founder of Infalia, a CERTH spin-off company. He holds a PhD in Computer Science from Aristotle University of Thessaloniki and a Professional Doctorate in Engineering from the Technical University of Eindhoven.',
+    ],
+  },
+  {
+    name: 'Nikos Sarris',
+    image: '/nikos-sarris.webp',
+    bio: [
+      'Nikos Sarris is a Senior Researcher in the MeVer group of the Information Technologies Institute of the Centre for Research and Technology Hellas (CERTH-ITI). His work focuses on multimedia analysis, the interpretation of news content and the assessment of its trustworthiness. He has extensive experience as a researcher, project manager and coordinator of large international research consortia.',
+      'He coordinated the development of TruthNest and Truly Media, the latter in collaboration with Deutsche Welle, and led the SOMA project, which deployed the first European Observatory against Disinformation. He currently coordinates the Mediterranean Digital Media Observatory (MedDMO) and serves on the Executive Board of the European Digital Media Observatory (EDMO). His professional background also includes 15 years at ATC, where he headed the Innovation Lab for seven years. He holds a PhD from Aristotle University of Thessaloniki.',
+    ],
+  },
+  {
+    name: 'Efthimios Hamilos',
+    image: '/efthimios-hamilos.webp',
+    bio: [
+      'Efthimios Hamilos is a Project Manager and Research Assistant in the MeVer group of the Information Technologies Institute of the Centre for Research and Technology Hellas (CERTH-ITI). He has contributed to several EU-funded research projects, undertaking quality assurance responsibilities and supporting project coordination. He currently assists in the coordination of the Mediterranean Digital Media Observatory (MedDMO).',
+      'His research interests focus on the practical application of advanced multimedia analysis technologies developed by MeVer. He explores potential uses for these tools and identifies opportunities to extend their capabilities, improve the services they support and enhance their efficiency. His academic background combines engineering with financial and management-related knowledge. He holds a master’s degree in Rural, Surveying and Geoinformatics Engineering from the National Technical University of Athens, and a master’s degree in Accounting and Finance from the Athens University of Economics and Business.',
+    ],
+  },
+  {
+    name: 'Olga Papadopoulou',
+    image: '/olga-papadopoulou.webp',
+    bio: [
+      'Olga Papadopoulou is a Project Manager and Researcher in the MeVer group of the Information Technologies Institute of the Centre for Research and Technology Hellas (CERTH-ITI). Her research interests span natural language processing, multimedia analysis, social network analysis and artificial intelligence. Her work focuses particularly on misinformation and disinformation, examining how the context surrounding online content can support the detection of misleading information.',
+      'She has contributed in project and technical managing capacity to several EU-funded research projects, including vera.ai, WeVerify, InVID, REVEAL and ForgetIT. Her experience combines participation in collaborative European research with the investigation of methods for identifying misleading content. She holds a degree in Electrical and Computer Engineering from Democritus University of Thrace.',
+    ],
+  },
+];
 ---
 
 <PartnerProfile
@@ -7,5 +42,6 @@ import PartnerProfile from '~/components/PartnerProfile.astro';
   shortName="CERTH"
   country="Greece"
   logo="/certh-logo.webp"
-  intro="CERTH is a research and technology partner in the FIMI-RESIST consortium."
+  intro="CERTH’s MeVer group brings expertise in artificial intelligence, media analysis, multimedia retrieval, verification and trustworthy AI to FIMI-RESIST."
+  {people}
 />
